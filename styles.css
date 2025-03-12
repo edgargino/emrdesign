@@ -1,0 +1,7 @@
+header {
+    height:fit-content;
+    max-height: 10vh;
+    width: 100vw;
+    background-color: rgb(179, 174, 174);
+    color:rgb(73, 161, 212)
+}
