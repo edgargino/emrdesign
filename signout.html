@@ -43,44 +43,46 @@
         }
 
         .card-header {
-            text-align: right;
+            text-align: center;
         }
 
-        main{
-            background-color: #afc1c4;
+        .card-body{
+            background-color: #def0f3;
+        }
+
+        .outing{
+            background-color: rgb(164, 211, 212);
         }
         
     </style>
-    <body>
-        
-        <main class="card">
 
-            <div class="card-header">
-                <img src="Logo.JPG" style="margin: 0; padding: 0; height: 15vh; align-self: center;">
-    
+    <main class="card">
+        <div class="card-header">
+            <img src="Logo.JPG" style="margin: 0; padding: 0; height: 15vh; align-self: center;">
+
+        </div>
+        <div class="card-body">
+            <div class="container"><br>
+                <h1>Thank you for coming!</h1>
+                <h4>Your records are in good hands!</h4>
+                <h4>Promise... we clean them!</h4>
             </div>
-            <div class="card-body">
+            <div id="cage">
                 
-                <div id="cage">
-                    <div class="logbox patient">
-                        <form><br>
-                            <h3>Facilities Login</h3><br><br>
-                            <label for="facilityin">Username</label> <input type="text" id="facilityin" placeholder="FACILITY@EMAIL.ORG"><br><br>
-                            <label for="facilitypwd">Password</label> <input type="password" id="facilitypwd" placeholder="SECRET"><br><br>
-                            <a href="staffdashboard.html" target="_self"><button type="submit">Log In</button></a>
-                        </form>
-                        
-                    </div>
+                <div class="logbox outing">
+                    <br><br>
+                    <h4>if you would like<br> to sign back in</h4><br><br>
                     
+                    <a href="index.html" target="_self"><button>Log in ></button></a>
                 </div>
-    
-            </div>
-            <div class="card-footer">
-    
             </div>
 
-        </main>
+        </div>
+        <div class="card-footer">
 
-    </body>
+        </div>
+
+    </main>
+
 
 </html>

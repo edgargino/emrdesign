@@ -1,33 +1,67 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
     </head>
+    <style>
+        #cage{
+            text-align: center;
+        }
+
+        .card-body{
+            height: 80vh;
+        }
+
+        .logbox{
+            height: 35vh;
+            width: 35vh;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10vh;
+            margin-left: 5vw;
+            margin-right: 5vw;
+            margin-bottom: 10vh;
+            border: dotted 2px grey;
+            border-radius: 4vh;
+            overflow: none;
+        }
+
+    </style>
     <body>
 
-        <header>
-            <div>
-                <img id="logo" src="Logo.JPG" alt="logo">
-            </div>
-            
-        </header>
-
         <main>
-            <div >
-                <form >
-                    <label for="email">Email</label><input type="email" id="email"> <br>
-                    <label for="pwd">Password</label><input type="password" id="pwd"> <br>
-                    <button type = "submit" onclick="">Log in</button>
+            
+            <div class="card-header">
+                <img src="Logo.JPG" style="margin: 0; padding: 0; height: 15vh; align-self: center;">
+    
+            </div>
+            <div class="card-body">
+                
+                <div id="cage">
+                    <div class="logbox patient">
+                        <form><br>
+                            <table>
 
-                </form>
+                            </table>
+                            <h3>Patient Login</h3><br><br>
+                            <label for="patientin">Username</label> &emsp; <input type="email" id="patientin" placeholder="PATIENT@EMAIL.COM"><br><br>
+                            <label for="patientpwd">Password</label> &emsp; <input type="password" id="patientpwd" placeholder="SECRET"><br><br>
+                            <a href="patientdashboard.html" target="_self"><button>Log In</button></a>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+    
+            </div>
+            <div class="card-footer">
+    
             </div>
             
 
         </main>
-
-        <footer>
-
-        </footer>
-
     </body>
 </html>
