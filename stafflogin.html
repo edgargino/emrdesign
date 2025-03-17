@@ -2,31 +2,85 @@
 <html lang="en">
     <head>
         <script src="ops.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+        <meta name="description" content="Platform for medical information management">
     </head>
+    <style>
+        .logbox{
+            height: 35vh;
+            width: 35vh;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10vh;
+            margin-left: 5vw;
+            margin-right: 5vw;
+            margin-bottom: 10vh;
+            border: dotted 2px grey;
+            border-radius: 4vh;
+            overflow: none;
+        }
 
+        .container {
+            margin: auto;
+            text-align: center;
+        }
+
+        #cage{
+            display: block;
+            height: 80vh;
+            text-align: center;
+
+        }
+
+        .patient{
+            background-color: rgb(211, 243, 243);
+        }
+
+        .staff{
+            background-color: rgb(248, 241, 233);
+        }
+
+        .card-header {
+            text-align: right;
+        }
+
+        main{
+            background-color: #afc1c4;
+        }
+        
+    </style>
     <body>
-        <header>
-            <div id="logoheader">
-            </div>
+        
+        <main class="card">
 
-        </header>
-        <main>
-            <div>
-                <form>
-                    <label for="facilityin">Username</label> <input type="text" id="facilityin" placeholder="sample@email.cm"><br>
-                    <label for="facilitypwd">Password</label> <input type="password" id="facilitypwd" placeholder="secret"><br>
-                    <button type="submit">Log In</button>
-                </form>
+            <div class="card-header">
+                <img src="Logo.JPG" style="margin: 0; padding: 0; height: 15vh; align-self: center;">
+    
+            </div>
+            <div class="card-body">
+                
+                <div id="cage">
+                    <div class="logbox patient">
+                        <form><br>
+                            <h3>Facilities Login</h3><br><br>
+                            <label for="facilityin">Username</label> <input type="text" id="facilityin" placeholder="FACILITY@EMAIL.ORG"><br><br>
+                            <label for="facilitypwd">Password</label> <input type="password" id="facilitypwd" placeholder="SECRET"><br><br>
+                            <button type="submit">Log In</button>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+    
+            </div>
+            <div class="card-footer">
+    
             </div>
 
         </main>
-        <footer>
-
-        </footer>
 
     </body>
-
 
 </html>
