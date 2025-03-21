@@ -29,6 +29,14 @@
             overflow: none;
         }
 
+        td {
+            justify-content: center;
+            text-align: center;
+        }
+        a{
+            margin: auto;
+        }
+
     </style>
     <body>
 
@@ -44,12 +52,23 @@
                     <div class="logbox patient">
                         <form><br>
                             <table>
+                                <th colspan="2">
+                                    <h3>Patient Login</h3><br>
+                                </th>
+                                <tr>
+                                    <td><label for="patientin">Username</label> </td>
+                                    <td><input type="email" id="patientin" placeholder="PATIENT@EMAIL.COM"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="patientpwd">Password</label> </td>
+                                    <td><input type="password" id="patientpwd" placeholder="SECRET"></td>
+                                </tr>
+                                <tr colspan="2" class="balance">
+                                    <td><a href="patientdashboard.html" target="_self">LOG IN</a></td>
+                                </tr>
 
                             </table>
-                            <h3>Patient Login</h3><br><br>
-                            <label for="patientin">Username</label> &emsp; <input type="email" id="patientin" placeholder="PATIENT@EMAIL.COM"><br><br>
-                            <label for="patientpwd">Password</label> &emsp; <input type="password" id="patientpwd" placeholder="SECRET"><br><br>
-                            <a href="patientdashboard.html" target="_self"><button>Log In</button></a>
+                            
                         </form>
                         
                     </div>

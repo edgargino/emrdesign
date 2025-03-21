@@ -5,6 +5,22 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
     </head>
+    <script>
+        function tabswitch(id) {
+            var i, tabcontent;
+            tabcontent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            
+            document.getElementById(id).style.display = "block";
+        }
+        window.onload = function(){
+            tabswitch("home");
+        };
+        
+    </script>
+    
     <style>
         .card-header{
             text-align: center;
@@ -15,41 +31,138 @@
             margin: auto
         }
 
-        .outing{
-            float: right;
+        .outing:hover{
+            background-color: rgb(250, 191, 191);
             width: fit-content;
+        }
+
+        .nav-link{
+            
+            font-weight:500;
+            color: rgb(185, 184, 184);
+        }
+
+        .reg:hover{
+            background-color: rgb(223, 223, 223);
+            color: rgb(185, 184, 184);
+        }
+
+        .upbar{
+            background-color: rgb(142, 174, 179);
+        }
+
+        .nav-link{
+            border: none;
+            outline: none;
         }
 
     </style>
     <body class="card">
+
+
+        <!-- Contains the logo at the top of the page-->
         <div class="card-header">
             <img src="Logo.JPG" alt="logo">
         </div>
+
+        <!--Navigator with links for patients-->
         <div class="card-nav">
-            <nav class="navbar navbar-expand-sm bg-light">
+            <nav class="navbar navbar-expand-sm bg-dark">
 
                 <!-- Links -->
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Records</a>
-                  </li>
-                </ul>
-              
+                    <li class="nav-item reg">
+                      <button class="nav-link" id="homepage" onclick="tabswitch('home')" href="#">Home</button>
+                    </li>
+                    <li class="nav-item reg">
+                      <button class="nav-link" onclick="tabswitch('profile')"  href="#">Profile</button>
+                    </li>
+                    <li class="nav-item reg">
+                      <button class="nav-link" onclick="tabswitch('records')"href="#">Records</button>
+                    </li>
+                    <li class="nav-item reg">
+                      <button class="nav-link" onclick="tabswitch('healthtips')"href="#">Health Tips</button>
+                    </li>
+                    <li class="nav-item outing ">
+                      <button class="nav-link" ><a href="signout.html">Sign out</a></button>
+                    </li>
+                </ul>           
             </nav>
-            <nav class="outing">
-                <a href="signout.html">Sign out</a>
-            </nav>
-
-        </div>
-        <div class="card-body">
             
+        </div>
 
+        <!--Here is the body of the content broken in 4 parts only appearing when patient is clicking on the assigned link-->
+        <div class="card-body">
+
+            <!-- HOME section with simple explanation on what the patient can do-->
+            <div id="home"  class="tab">
+                <div class="jumbotron">
+                    <h1 id="welcome">WELCOME BACK</h1>  <!--If we are adding the first name of patient -->
+                    <h4>It is good to see you again, hopefully you are in great health.</h4>
+                </div>
+                <div>
+                    <p>To guide you on this account, here are a few things you can do:</p>
+                    <ul>
+                        <li><b>Profile</b>: this is where we can see your personal information.</li>
+                        <li><b>Records</b>: You can look all your admissions to our facility here.</li>
+                        <li><b>Health Tips</b>: Here are health tips to help you manage your health and give you a better perspective.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!--This is a display of generic information on patient-->
+            <div id="profile" class="tab">
+                <div id="geninfo">
+                    <table>
+                        <tr>
+                            <td>Last Name :</td>
+                            <td id="lastname">Name :</td>
+                        </tr>
+                        <tr>
+                            <td>First Name :</td>
+                            <td id="firstname">Name :</td>
+                        </tr>
+                        <tr>
+                            <td>Gender :</td>
+                            <td id="gender">Male or Female :</td>
+                        </tr>
+                        <tr>
+                            <td>Birthdate :</td>
+                            <td id="dob">01/01/1990 :</td>
+                        </tr>
+                        <tr>
+                            <td>Email :</td>
+                            <td id="email">Name :</td>
+                        </tr>
+                        <tr>
+                            <td>Phone :</td>
+                            <td id="phone">Name :</td>
+                        </tr>
+                        <tr>
+                            <td>Patient Number :</td>
+                            <td id="ptId">123456789</td>
+                        </tr>
+                        <tr>
+                            <td>Last Access :</td>
+                            <td id="lastaccess">Name :</td>
+                        </tr>                        
+                        
+                    </table>
+                </div>
+
+            </div>
+
+            <!--This is were all records of the patient will appear when needed.-->
+            <div id="records"  class="tab">
+                <div class="jumbotron" id="recordhead"></div>
+            </div>
+
+            <!-- Here are a few links and health tips for patients to follow for better health-->
+            <div id="healthtips"  class="tab">
+                
+            </div>
+            
         </div>
         <div class="card-footer">
 

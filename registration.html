@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="ops.js"></script>
         <link type="text/css" rel="styleshee" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     </head>
+    <script>
+        function regis(){
+            /**
+            let firstname, lastname, birthdate, gender, phonenumber, email, username, password, passwordcheck, tribe, errcount, errors;
+            firstname = document.getElementById("fName").value;
+            lastname = document.getElementById("lName").value;
+            birthdate = document.getElementById('dob').value;
+            gender = document.getElementById('gender').value;
+            tribe = document.getElementById('tribe').value;;
+            phonenumber = document.getElementById('phone').value;
+            email = document.getElementById('email').value;
+            username = document.getElementById('emailcheck').value;
+            password = document.getElementById('pwd').value;
+            passwordcheck = document.getElementById('pwdcheck').value;
+            console.log(firstname, lastname, birthdate, gender, tribe, phonenumber); **/
+            let a = document.getElementsById('mainbod').value
+            a=a.write("Thank you for completing the form. You can now <a href='patientlogin.html' target='_self'>Log In</a>.")
+        }
+        
+    </script>
+    <style>
+        .card-header{
+            text-align: center;
+        }
+    </style>
 
     <body>
         
@@ -14,42 +38,35 @@
                 <img src="Logo.JPG" style="margin: 0; padding: 0; height: 15vh; align-self: center;">
     
             </div>
-            <div class="card-body">
+
+            <div id="warn"></div>
+            <div class="card-body" id="mainbod">
                 <div class="logbox">
-                    <div id="form1">
-                        <form class="formpres" id = "regisform"></form>
+                    <div id="form1">                        
+                        <form name="registrar" method="POST" id="formpres"></form>
+                            
                             <table>
                                 <tr>
-                                    <td><label for="fName">First Name</label> &emsp; </td>
-                                    <td><input type="text" id="fName" required></td>
-                                </tr>
-                                <tr>
+                                    <td><label for="fName">First Name</label> &emsp; &emsp; </td>
+                                    <td><input type="text" id="fName" required placeholder="Mark">&emsp; &emsp;</td>
                                     <td><label for="lName">Last Name</label> &emsp; </td>
-                                    <td><input type="text" id="lName" required> </td>
+                                    <td><input type="text" id="lName" required placeholder="Smythe"> </td>
                                 </tr>
                                 <tr>
                                     <td><label for="dob">Date of Birth</label> &emsp;</td>
                                     <td><input type="date" id="dob" required></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="phone">Phone</label> &emsp;</td>
-                                    <td><input type="tel" id="phone" required></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="email">Email</label> &emsp;</td>
-                                    <td><input type="email" id="email" required></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="pwd">Password</label> &emsp;</td>
-                                    <td><input type="password" id="pwd" required></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="address">Address</label> &emsp;</td>
-                                    <td><input type="text" id="address"></td>
+                                    <td><label for="gender">Tribe:</label> </td>
+                                    <td><select id="gender" required>
+                                            <option>Choose an option</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select> 
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><label for="tribe">Tribe:</label> </td>
-                                    <td><select id="tribe">
+                                    <td><select id="tribe" required>
+                                            <option>Select</option>
                                             <option>Arab</option>
                                             <option>Bamoun</option>
                                             <option>Bamileke</option>
@@ -59,14 +76,35 @@
                                             <option>Toupouri</option>
                                         </select> 
                                     </td>
+                                    <td><label for="phone">Phone</label> &emsp;</td>
+                                    <td><input type="tel" id="phone" required placeholder="8124879631"></td>
+                                </tr>
+                                <tr>   
+                                    <td><label for="email">Email</label> &emsp;</td>
+                                    <td><input type="email" id="email" required placeholder="sample@email.com"></td>
+                                    <td><label for="emailcheck"> Re-enter Email</label> &emsp;</td>
+                                    <td><input type="email" id="emailcheck" required placeholder="sample@email.com"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="pwd">Password</label> &emsp;</td>
+                                    <td><input type="password" id="pwd" required placeholder="secret"></td>
+                                    <td><label for="pwdcheck">Re-enter Password</label> &emsp;</td>
+                                    <td><input type="password" id="pwdcheck" required placeholder="secret"></td>
+                                </tr>
+                                <tr>
                                 </tr>
                                 
+                                
                                 <tr>
-                                    <td colspan="2"><a href="staffdashboard.html"><button type="submit">Register</button></a></td>
+                                    <td colspan="4" style="text-align: center;"><br><br><button onclick="regis()">Register</button></td>
                                     
                                 </tr>
                             </table>           
-                                        
+                            <!--            for form testing only
+                            <input type="text" id="name" placeholder="Name">
+                            <input type="text" id="lastname" placeholder="lastname">
+                            <input type="text" id="other" placeholder="other">
+                            <button type="submit">Submit</button>-->
 
                         </form>
                     </div>
